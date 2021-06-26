@@ -1,11 +1,13 @@
 import numpy as np 
 import pandas as pd 
 import pickle
+import joblib
 
 from flask import Flask, request, render_template
 
 app=Flask(__name__)
-model =  pickle.load(open('SecondModelTest.sav','rb'))
+#model =  pickle.load(open('SecondModelTest.sav','rb'))
+model = joblib.load("SecondModelTest.sav")
 
 @app.route('/')
 def index():
