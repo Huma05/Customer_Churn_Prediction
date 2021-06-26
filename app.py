@@ -4,7 +4,7 @@ import pickle
 
 from flask import Flask, request, render_template
 
-app=Flask("__name__")
+app=Flask(__name__)
 model =  pickle.load(open('SecondModelTest.sav','rb'))
 
 @app.route('/')
@@ -31,5 +31,5 @@ def predict():
     # return render_template('sec.html',prediction_text='Customer is {}'.format(res_val))  
 
 
-if __name__=="__main__":
+if __name__=='__main__':
     app.run(debug=True)
