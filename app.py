@@ -30,7 +30,7 @@ def predict():
  	   res_val= "CUSTOMER IS NOT LOYAL" 
 
     return res_val
-     return render_template('index.html',prediction_text='Customer is {}'.format(res_val))  
+    # return render_template('index.html',prediction_text='Customer is {}'.format(res_val))  
 
 
 if __name__=='__main__':
