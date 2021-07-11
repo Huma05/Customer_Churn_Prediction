@@ -4,7 +4,16 @@
 	<title></title>
   
     <link rel="stylesheet"  href="{{ url_for('static',filename='style2.css')}}">
+ <script>
+function toggle() {
+	
+  var blur = document.getElementById("blur");
+  blur.classList.toggle("active");
+  var popup = document.getElementById("popup");
+  popup.classList.toggle("active");
+}
 
+</script>
 
 </head>
 <body>
@@ -160,16 +169,7 @@
 
       <a href="#" onclick="toggle()">close</a>
  </div>
-<script>
-function toggle() {
-	
-  var blur = document.getElementById("blur");
-  blur.classList.toggle("active");
-  var popup = document.getElementById("popup");
-  popup.classList.toggle("active");
-}
 
-</script>
 
 <!-- <script src="{{url_for('static',filename='sc.js')}}"></script> -->
 </body>
